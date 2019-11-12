@@ -17,8 +17,6 @@ def import_scores(file_name = 'votes.csv'):
             continue
         if int(row[0]) not in range(1975,2016) or row[1] != 'final' or row[6] == '0':
             continue
-        print(row)
-        print(ESC)
         if row[2] not in ESC[row[0]]:
             ESC[row[0]][row[2]] = dict()
         ESC[row[0]][row[2]][row[3]] = int(row[6])
